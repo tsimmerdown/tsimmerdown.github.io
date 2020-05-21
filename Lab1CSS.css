@@ -1,0 +1,38 @@
+.header{
+    display: inline-block;
+}
+
+.container{
+    text-align: center
+}
+
+.question{
+    font-weight: bold;
+}
+
+#image{
+    height: 500px;
+    width: 100vh;
+}
+
+#scontainer{
+    text-align: left;
+    margin-left: 50px;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -15px; 
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+footer, .page-wrap:after {
+    height: 15px; 
+  }
+footer {
+    /* background: orange; */
+    text-align: right;
+  }
