@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="page-wrap">
+    <div class="header">Stephen's Superstore</div>
+
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <!-- <div class="tab">
+      <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+      <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+      <button class="tablinks" style="position: absolute; right: 10px;" onclick="openInfo(event, 'Cart')">Cart</button>
+    </div>-->
+
+
+
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent">
+      <h3>Client Information</h3>
+      <p>Before we get started, tell us a bit about youself.</p>
+      I prefer foods that are... <br>
+      <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+        <option value=""></option>
+        <option value="V/G">Vegetarian/GlutenFree</option>>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="GlutenFree">GlutenFree</option>
+        <option value="None">None</option>
+      </select> -->
+      <div>
+        <input type="radio" name="dietSelect" id="V/G" value="V/G" onchange="populateListProductChoices(this.name)">
+        <label for="V/G">Vegetarian/GlutenFree</label>
+        <input type="radio" name="dietSelect" id="Vegetarian" value="Vegetarian"
+          onchange="populateListProductChoices(this.name)">
+        <label for="V/G">Vegetarian</label>
+        <input type="radio" name="dietSelect" id="GlutenFree" value="GlutenFree"
+          onchange="populateListProductChoices(this.name)">
+        <label for="V/G">GlutenFree</label>
+        <input type="radio" name="dietSelect" id="None" value="None" onchange="populateListProductChoices(this.name)">
+        <label for="V/G">No preference</label>
+      </div>
+      <p><input id="organic" type="checkbox" onchange="populateListProductChoices('dietSelect', 'displayProduct')"
+          >Organic
+      </p>
+      <div style="display: flex; flex-direction: row-reverse;">
+        <button id="next" onclick="openInfo(event, 'Products')">Next</button>
+      </div>
+    </div>
+
+    <div id="Products" class="tabcontent">
+      <h3>Your targeted products</h3>
+      <p>We have preselected products based on your preferences.</p>
+      Please select the items that you would like to add to your cart :
+      <!-- <div id="displayProduct"> -->
+      <div>
+        <button class="accordion">Vegetable</button>
+        <div class="panel" id="Vegetable">
+        </div>
+
+        <button class="accordion">Grain</button>
+        <div class="panel" id="Grain">
+        </div>
+
+        <button class="accordion">Protein</button>
+        <div class="panel" id="Protein">
+        </div>
+
+        <button class="accordion">Dessert</button>
+        <div class="panel" id="Dessert">
+        </div>
+
+      </div>
+      <div style="display: flex; flex-direction: row-reverse;">
+        <button id="next" onclick="openInfo(event, 'Cart'); selectedItems()">Next</button>
+        <button id="back" onclick="openInfo(event, 'Client')">Back</button>
+      </div>
+    </div>
+
+    <div id="Cart" class="tabcontent">
+      <h3>Cart</h3>
+      <p>The content within your cart is listed below</p>
+      <div id="displayCart"></div>
+      <div style="display: flex; flex-direction: row-reverse;">
+        <button id="checkout" onclick="openInfo(event, 'Thanks')">Check Out</button>
+        <button id="back" onclick="openInfo(event, 'Products')">Back</button>
+      </div>
+    </div>
+
+    <div id="Thanks" class="tabcontent">
+      <h3>Thank you!!</h3>
+      <p>Thank you for shopping at Stephen's Superstore.</p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        openInfo(event, 'Client')
+      });
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
+
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+  </div>
+  <footer>
+    <p>Designed by: Stephen Tsim</p>
+  </footer>
+</body>
+
+</html>
