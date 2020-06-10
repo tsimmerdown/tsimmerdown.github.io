@@ -78,32 +78,32 @@
         <div id="mechanics" class="collapse">
             <div style="display: flex; flex-direction: row;">
 
-                <div class="card bg-warning" style="width:200px; margin: 20px">
-                    <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Erwind</h4>
-                        <p class="card-text">Erwind knows all about bikes.</p>
+                <div class="card bg-warning" style="width:200px; margin: 20px;">
+                    <img class="card-img-top" src="images/John.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">John</h4>
+                        <p class="card-text">Senior Stylist</p>
                     </div>
                 </div>
                 <div class="card bg-warning" style="width:200px; margin: 20px">
-                    <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Erwind</h4>
-                        <p class="card-text">Erwind knows all about bikes.</p>
+                    <img class="card-img-top" src="images/Ben.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">Ben</h4>
+                        <p class="card-text">Master Stylist</p>
                     </div>
                 </div>
                 <div class="card bg-warning" style="width:200px; margin: 20px">
-                    <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Erwind</h4>
-                        <p class="card-text">Erwind knows all about bikes.</p>
+                    <img class="card-img-top" src="images/Sarah.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">Sarah</h4>
+                        <p class="card-text">Intermediate Stylist</p>
                     </div>
                 </div>
                 <div class="card bg-warning" style="width:200px; margin: 20px">
-                    <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Erwind</h4>
-                        <p class="card-text">Erwind knows all about bikes.</p>
+                    <img class="card-img-top" src="images/Lucas.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">Lucas</h4>
+                        <p class="card-text">Master Stylist</p>
                     </div>
                 </div>
             </div>
@@ -129,50 +129,66 @@
             <p> Saturday <br> 9:00am - 4:00pm</p>
         </div>
     </div>
-
-    <div id="accordion">
-        <div class="card">
-            <div class="card-header">
-                <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-            </div>
-            <div id="collapseService" class="collapse show" data-parent="#accordion">
-                <div class="card-body">
-                    <p>Here is our list of services</p>
-                </div>
-            </div>
+    <div class="booking">
+        <div id="accordion">
             <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
                 </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
                     <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                    id="dateTimeInput">
+                        <p>Please select the service you like to book for</p>
+                        <input type="radio" name="book-service" id="b_haircut"><label for="b_haircut" style="margin-right: 10px;">Haircut</label>
+                        <input type="radio" name="book-service" id="b_perm"><label for="b_perm" style="margin-right: 10px;">Perm</label>
+                        <input type="radio" name="book-service" id="b_color"><label for="b_color" style="margin-right: 10px;">Color</label>
+                        <br>
+                        <br>
+                        <p>Please select desired barber</p>
+                        <input type="radio" name="book-barber" id="John"><label for="John" style="margin-right: 10px;">John</label>
+                        <input type="radio" name="book-barber" id="Ben"><label for="Ben" style="margin-right: 10px;">Ben</label>
+                        <input type="radio" name="book-barber" id="Sarah"><label for="Sarah" style="margin-right: 10px;">Sarah</label>
+                        <input type="radio" name="book-barber" id="Lucas"><label for="Lucas" style="margin-right: 10px;">Lucas</label>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    </div>
+                    <div id="collapseDate" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>What date?</p>
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="form-group row">
+                                <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                        id="dateTimeInput">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
-                </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                    </div>
+                    <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Your information so we can contact you</p>
+                            <form>
+                                <p>Name: <input type="text" id="name" value=""></p>
+                                <p>Email Address: <input type="email" id="name" value=""></p>
+                                <p>Phone Number: <input type="tel" id="name" value=""></p>
+                                <input type="Reset">
+                                <input type="Submit" value="Book">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
