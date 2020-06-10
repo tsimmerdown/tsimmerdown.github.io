@@ -38,6 +38,7 @@ h1 {
 
 .image{
   padding: 10px;
+  position: relative;
   transition: ease-in 0.2s;
   opacity: 1;
   height: 200px;
@@ -60,5 +61,17 @@ h1 {
 }
 
 .booking{
+  font-family: Arial, Helvetica, sans-serif;
   margin: 10px 150px;
+}
+
+.box .text{
+  position: relative;
+  z-index: -1;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -150px; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 60%; /* Set the width of the positioned div */
 }
