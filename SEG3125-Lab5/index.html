@@ -1,0 +1,248 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+
+<head>
+    <title>Module 5 Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- jquery-->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <script src="./scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7a9e9f;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#first"><img src="./images/icons8-home-24.png" alt="Home"
+                            height="20px"><strong><em>Home</em></strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#second"><img src="./images/icons8-hair-dryer-26.png" alt="Service"
+                            height="20px"><strong><em>Services</em></strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#third"><img src="./images/icons8-location-24.png" alt="Location"
+                            height="20px"><strong><em>Location</em></strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fifth"><img src="./images/icons8-insert-credit-card-64.png" alt="Book"
+                            height="20px"><strong><em>Book</em></strong></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="title" id="first">
+        <img src="./images/logo-removebg-preview.png" alt="Logo" height="200px">
+        <div class="display-1">
+            <p>Stephen's Barbershop</p>
+            <h4>Turning your hair fantasies into reality</h4>
+        </div>
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <!-- <div class="nav">
+        <button type="button" class="btn btn-light"
+            onclick="document.getElementById('services').scrollIntoView({behaviour:'smooth'})"
+            style="background-color: #b8d8d8;">Services</button>
+        <button type="button" class="btn btn-light" style="background-color: #b8d8d8;">Where to find us</button>
+        <button type="button" class="btn btn-light" style="background-color: #b8d8d8;">Book an Appointment</button>
+    </div> -->
+
+
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="services" id="second">
+        <h3>Our Services</h3>
+        <div class="img-container">
+            <div>
+                <div class="box">
+                    <img class="image" src="./images/Haircut.jpg" alt="Haircut">
+                    <div class="text"><strong>Haircut </strong><br> Price: $30 for men, $40 for women<br> Approx time:
+                        60-90 minutes</div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <img class="image" src="./images/Perm.jpg" alt="Perm">
+                    <div class="text"><strong>Perm</strong><br> Price: $80 - $150<br> Approx time: 3 hours</div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <img class="image" src="./images/Color.jpg" alt="Color">
+                    <div class="text"><strong>Color</strong><br> Price: $100 - 200<br> Approx time: 8 hours</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- A different approach would be to make the whole staff information collapsible -->
+    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
+    <!-- Here a single card is used, but card columns could be used -->
+    <div class="container" style="font-family: Arial, Helvetica, sans-serif; padding-bottom: 20px;" id="third">
+        <a href="#mechanics" class="btn btn-block" data-toggle="collapse" style="background-color: #b8d8d8;"><img
+                src="./images/icons8-barber-chair-24.png" alt="Logo"> Meet the team</a>
+        <div id="mechanics" class="collapse">
+            <div style="display: flex; flex-direction: row;">
+
+                <div class="card bg-warning" style="width:200px; margin: 20px;">
+                    <img class="card-img-top" src="images/John.jpg" alt="Card image" style="width:100%; height: 150px;">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">John</h4>
+                        <p class="card-text">Senior Stylist</p>
+                    </div>
+                </div>
+                <div class="card bg-warning" style="width:200px; margin: 20px">
+                    <img class="card-img-top" src="images/Ben.jpg" alt="Card image" style="width:100%; height: 150px;">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">Ben</h4>
+                        <p class="card-text">Master Stylist</p>
+                    </div>
+                </div>
+                <div class="card bg-warning" style="width:200px; margin: 20px">
+                    <img class="card-img-top" src="images/Sarah.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">Sarah</h4>
+                        <p class="card-text">Intermediate Stylist</p>
+                    </div>
+                </div>
+                <div class="card bg-warning" style="width:200px; margin: 20px">
+                    <img class="card-img-top" src="images/Lucas.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body" style="background-color: #b8d8d8;">
+                        <h4 class="card-title">Lucas</h4>
+                        <p class="card-text">Master Stylist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+
+    <div class="contact" id="fourth">
+        <div id="Address">
+            <h3>Get in Touch</h3>
+            <p> 123 Sommerset Rd, Ottawa, ON</p>
+            <p> 123-456-7890</p>
+            <p> info@stephenbarber.ca</p>
+        </div>
+        <div>
+            <h3>Store Hours</h3>
+            <p> Tuesday to Friday <br> 9:00am - 6:00pm</p>
+
+            <p> Saturday <br> 9:00am - 4:00pm</p>
+        </div>
+    </div>
+    <br>
+    <div class="booking" id="fifth">
+        <h3 style="text-align: center;">Book Now</h3>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Please select the service you like to book for</p>
+                        <input type="radio" name="book-service" id="b_haircut"><label for="b_haircut"
+                            style="margin-right: 10px;">Haircut</label>
+                        <input type="radio" name="book-service" id="b_perm"><label for="b_perm"
+                            style="margin-right: 10px;">Perm</label>
+                        <input type="radio" name="book-service" id="b_color"><label for="b_color"
+                            style="margin-right: 10px;">Color</label>
+                        <br>
+                        <br>
+                        <p>Please select desired barber</p>
+                        <input type="radio" name="book-barber" id="John"><label for="John"
+                            style="margin-right: 10px;">John</label>
+                        <input type="radio" name="book-barber" id="Ben"><label for="Ben"
+                            style="margin-right: 10px;">Ben</label>
+                        <input type="radio" name="book-barber" id="Sarah"><label for="Sarah"
+                            style="margin-right: 10px;">Sarah</label>
+                        <input type="radio" name="book-barber" id="Lucas"><label for="Lucas"
+                            style="margin-right: 10px;">Lucas</label>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    </div>
+                    <div id="collapseDate" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>What date?</p>
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="form-group row">
+                                <label for="date" class="col-2 col-form-label">Date and time</label>
+                                    <!--                                     <input id="dateInput" type="datetime-local" value="2011-08-19T13:45:00">
+ -->                            <input type="text" id="date"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                    </div>
+                    <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Your information so we can contact you</p>
+                            <form>
+                                <p>Name: <input type="text" id="name" value=""></p>
+                                <p>Email Address: <input type="email" id="email" value=""></p>
+                                <p>Phone Number: <input type="tel" id="tele" value=""></p>
+                                <p>Credit Card: <input type="text" id="debit"
+                                        title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+                                </p>
+                                <input type="Reset">
+                                <input type="Submit" value="Book">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
