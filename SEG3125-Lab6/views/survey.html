@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="UI Survey">
+    <meta name="author" content="Stephen Tsim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Lab1CSS.css">
+    <!--BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>Questionaire</title>
+</head>
+
+<body>
+    <div class="back">
+    <div class="cont">
+        <div class="container">
+            <div class="header">
+                <h1>User Interface (UI) Evaluation</h1>
+                <a href="https://www.airbnb.ca/" target="blank"><img src="../airbnb.png" alt="Airbnb Icon" id="image"></a>
+                <br>
+                <a href="https://www.airbnb.ca/" target="blank">UI in question</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <form method="POST">
+                <div id="scontainer">
+                    <p>
+                        <label>First Name:
+                            <input type="text" name="Fname" placeholder="Enter your first name">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Surname:
+                            <input type="text" name="Lname" placeholder="Enter your last name">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Email Address:
+                            <input type="text" name="Email" placeholder="Enter your email address">
+                        </label>
+                    </p>
+                    <p><span class="question">What year are you in?</span>
+                        <br>
+                        <label>
+                            <input type="radio" name="Label" value="Not yet in university">Not yet in university
+                        </label>
+                        <label>
+                            <input type="radio" name="Label" value="Freshman">Freshman
+                        </label>
+                        <label>
+                            <input type="radio" name="Label" value="Sophomore">Sophomore
+                        </label>
+                        <label>
+                            <input type="radio" name="Label" value="Junior">Junior
+                        </label>
+                        <label>
+                            <input type="radio" name="Label" value="Senior">Senior
+                        </label>
+                        <label>
+                            <input type="radio" name="Label" value="Graduate">Graduate
+                        </label>
+                    </p>
+                    <p>
+                    <details>
+                        <summary>Survey Questions</summary>
+                        <ol>
+                            <li>
+                                <p>
+                                    <span class="question">Is the UI aesthetically pleasing?</span>
+                                    <br>
+                                    <label>
+                                        <input type="radio" name="Q1" value="Yes">Yes
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Q1" value="Somewhat">Somewhat
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Q1" value="No">No
+                                    </label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="question" >How would you rate the consistency of the UI?</span>
+                                    <br>
+                                    Inconsistent
+                                    <label>
+                                        <input type="radio" name="Q2" value="1">
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Q2" value="2">
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Q2" value="3">
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Q2" value="4">
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="Q2" value="5">
+                                    </label>
+                                    Consistent
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <label><span class="question">What do you like most about the UI?</span>
+                                        <br>
+                                        <input type="text" name="Q3">
+                                    </label>
+                                </p>
+                            </li>
+                            <li>
+                                <span class="question">What does the UI excel in demonstrating?</span>
+                                <br>
+                                <label>
+                                    <input type="checkbox" name="Q4" value="Consistency">Consistency
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" name="Q4" value="Efficiency">Efficiency
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" name="Q4" value="Usability">Usability
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" name="Q4" value="Reliability">Reliablity
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="checkbox" name="Q4" value="Security">Security
+                                </label>
+                            </li>
+                            <li>
+                                <span class="question">Is the website functioning as you would have expected?</span>
+                                <br>
+                                <label>
+                                    <select name="Q5" id="functionality">
+                                        <option value="notselected"></option>
+                                        <option value="yes">Yes</option>
+                                        <option value="somewhat">Somewhat</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <p>
+                                    <label><span class="question">Comments</span>
+                                        <br>
+                                        <textarea placeholder="Please enter additional comments" name="Q6"></textarea>
+                                    </label>
+                                </p>
+                            </li>
+                        </ol>
+
+                    </details>
+                    </p>
+
+                    <p>
+                        <input type="submit" id="bb" value="Submit">
+                        <input type="reset" value="Clear">
+                    </p>
+                </div>
+            </form>
+        </div>
+    
+    <footer>
+        <p> Website Designed by: Stephen Tsim</p>
+    </footer>
+</div>
+</div>
+<script src="/assets/action.js"></script>
+
+</body>
+
+</html>
