@@ -1,14 +1,43 @@
 [
     {
-        "Fname": "Stephen",
-        "Lname": "Tsim",
-        "Email": "stsim096@uottawa.ca",
         "Label": "Senior",
         "Q1": "Yes",
         "Q2": "3",
         "Q3": "Consistency",
         "Q4": "Efficiency",
         "Q5": "yes",
-        "Q6": "No comment"
+        "Q6": "No comment",
+        "count": null
+    },
+    {
+        "Label": "Freshman",
+        "count": 1
+    },
+    {
+        "Q1": "No",
+        "count": 1
+    },
+    {
+        "Q2": "5",
+        "count": 1
+    },
+    {
+        "Q3": "faf",
+        "count": 1
+    },
+    {
+        "Q4": [
+            "Usability",
+            "Reliability"
+        ],
+        "count": 1
+    },
+    {
+        "Q5": "no",
+        "count": 1
+    },
+    {
+        "Q6": "da",
+        "count": 1
     }
 ]

@@ -5,7 +5,7 @@ var fs = require('fs');
 
 // read the data file
 function readData(fileName){
-    let dataRead = fs.readFileSync('./data/' + fileName + '.json');
+    let dataRead = fs.readFileSync('./data/' + fileName +'.json');
     let infoRead = JSON.parse(dataRead);
     return infoRead;
 }
@@ -13,7 +13,7 @@ function readData(fileName){
 // read the data file
 function writeData(info, fileName){
     data = JSON.stringify(info);
-    fs.writeFileSync('./data/' + fileName + '.json', data);
+    fs.writeFileSync('./data/' + fileName +'.json', data);
 }
 
 // update the data file, I use "name" to be equal to fruit, or animal or color
@@ -42,23 +42,28 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        var label = readData("Label");
+        var Q1 = readData("Q1");
+        var Q2 = readData("Q2");
+        var Q3 = readData("Q3");
+        var Q4 = readData("Q4");
+        var Q5 = readData("Q5");
+        var Q6 = readData("Q6");
+
+        res.render('showResults', {results: [label,Q1,Q2,Q3,Q4,Q5,Q6]});
+        console.log([label,Q1,Q2,Q3,Q4,Q5,Q6]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
     // serve a static html (the survey itself to fill in)
-    app.get('/niceSurvey', function(req, res){
-        res.sendFile(__dirname+'/views/niceSurvey.html');
+    app.get('/survey', function(req, res){
+        res.sendFile(__dirname+'/views/survey.html');
     });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
-    app.post('/niceSurvey', urlencodedParser, function(req, res){
+    app.post('/survey', urlencodedParser, function(req, res){
         console.log(req.body);
         var json = req.body;
         for (var key in json){
@@ -75,7 +80,7 @@ module.exports = function(app){
         }
         // mystery line... (if I take it out, the SUBMIT button does change)
         // if anyone can figure this out, let me know!
-        res.sendFile(__dirname + "/views/niceSurvey.html");
+        res.sendFile(__dirname + "/views/survey.html");
     });
     
 
